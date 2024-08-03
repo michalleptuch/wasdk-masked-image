@@ -46,7 +46,7 @@ namespace ImageWithMask
       }
 
       var imageBrush = _compositor.CreateSurfaceBrush(_backgroundSurface);
-      imageBrush.Stretch = CompositionStretch.UniformToFill; //// Preserves image ratio and fills entire container (stack panel)
+      imageBrush.Stretch = CompositionStretch.UniformToFill; //// Preserves image ratio and fills entire container (stack panel, grid, etc)
 
       var maskBrush = _compositor.CreateSurfaceBrush(_maskSurface);
       maskBrush.Stretch = CompositionStretch.Fill; //// Stretches mask image to the size of container
