@@ -23,6 +23,7 @@ namespace ImageWithMask
       AppWindow.TitleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
 
       MaskedImageStackPanel.Loaded += (_, _) => LoadBackground();
+      MaskedImageStackPanel.Unloaded += (_, _) => UnloadBackground();
     }
 
     private void LoadBackground()
@@ -61,6 +62,12 @@ namespace ImageWithMask
       outputSpriteVisual.Brush = maskedBrush;
 
       ElementCompositionPreview.SetElementChildVisual(MaskedImageStackPanel, outputSpriteVisual);
+    }
+
+    private void UnloadBackground()
+    {
+      _backgroundSurface?.Dispose();
+      _maskSurface?.Dispose();
     }
 
     private void RefreshBackground(object sender, SizeChangedEventArgs e)
