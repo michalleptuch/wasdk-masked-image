@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ImageWithMask (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "ImageWithMask (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

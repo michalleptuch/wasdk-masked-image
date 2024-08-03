@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Window
+  x:Class="ImageWithMask.MainWindow"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:local="using:ImageWithMask"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  mc:Ignorable="d">
+
+  <Window.SystemBackdrop>
+    <MicaBackdrop Kind="Base" />
+  </Window.SystemBackdrop>
+
+  <Grid>
+    <StackPanel
+      x:Name="MaskedImageStackPanel"
+      Height="400"
+      HorizontalAlignment="Stretch"
+      VerticalAlignment="Top"
+      SizeChanged="RefreshBackground" />
+  </Grid>
+</Window>
