@@ -13,11 +13,111 @@
   </Window.SystemBackdrop>
 
   <Grid>
-    <StackPanel
-      x:Name="MaskedImageStackPanel"
+    <Grid.Resources>
+      <StaticResource x:Key="TileAcrylicBrush" ResourceKey="SystemControlAcrylicElementBrush" />
+    </Grid.Resources>
+
+    <Grid
+      x:Name="MaskedImageGrid"
       Height="400"
       HorizontalAlignment="Stretch"
       VerticalAlignment="Top"
       SizeChanged="RefreshBackground" />
+
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="240" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+
+      <StackPanel
+        Margin="60,0,0,0"
+        HorizontalAlignment="Left"
+        VerticalAlignment="Center">
+        <TextBlock
+          Margin="0,0,0,8"
+          FontFamily="Segoe UI Variable Display, Segoe UI"
+          FontSize="48"
+          Text="Hello world" />
+        <Button Content="Click me" />
+      </StackPanel>
+
+      <StackPanel
+        Grid.Row="1"
+        Margin="60,0"
+        Orientation="Horizontal">
+        <Grid
+          Width="180"
+          Height="240"
+          Margin="0,0,8,0"
+          Background="{ThemeResource TileAcrylicBrush}"
+          BorderBrush="#66575757"
+          BorderThickness="2"
+          CornerRadius="8">
+          <StackPanel Padding="16">
+            <Image
+              Width="48"
+              Margin="0,0,0,12"
+              HorizontalAlignment="Left"
+              Source="ms-appx:///Images/Folder.svg" />
+            <TextBlock
+              Margin="0,0,0,8"
+              FontSize="16"
+              Text="Hello world 1" />
+            <TextBlock
+              Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+              Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              TextWrapping="WrapWholeWords" />
+          </StackPanel>
+        </Grid>
+        <Grid
+          Width="180"
+          Height="240"
+          Margin="0,0,8,0"
+          Background="{ThemeResource TileAcrylicBrush}"
+          BorderBrush="#66575757"
+          BorderThickness="2"
+          CornerRadius="8">
+          <StackPanel Padding="16">
+            <Image
+              Width="48"
+              Margin="0,0,0,12"
+              HorizontalAlignment="Left"
+              Source="ms-appx:///Images/Folder.svg" />
+            <TextBlock
+              Margin="0,0,0,8"
+              FontSize="16"
+              Text="Hello world 2" />
+            <TextBlock
+              Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+              Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              TextWrapping="WrapWholeWords" />
+          </StackPanel>
+        </Grid>
+        <Grid
+          Width="180"
+          Height="240"
+          Background="{ThemeResource TileAcrylicBrush}"
+          BorderBrush="#66575757"
+          BorderThickness="2"
+          CornerRadius="8">
+          <StackPanel Padding="16">
+            <Image
+              Width="48"
+              Margin="0,0,0,12"
+              HorizontalAlignment="Left"
+              Source="ms-appx:///Images/Folder.svg" />
+            <TextBlock
+              Margin="0,0,0,8"
+              FontSize="16"
+              Text="Hello world 3" />
+            <TextBlock
+              Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+              Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              TextWrapping="WrapWholeWords" />
+          </StackPanel>
+        </Grid>
+      </StackPanel>
+    </Grid>
   </Grid>
 </Window>

@@ -22,8 +22,8 @@ namespace ImageWithMask
       AppWindow.TitleBar.ButtonBackgroundColor = Colors.Transparent;
       AppWindow.TitleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
 
-      MaskedImageStackPanel.Loaded += (_, _) => LoadBackground();
-      MaskedImageStackPanel.Unloaded += (_, _) => UnloadBackground();
+      MaskedImageGrid.Loaded += (_, _) => LoadBackground();
+      MaskedImageGrid.Unloaded += (_, _) => UnloadBackground();
     }
 
     private void LoadBackground()
@@ -55,13 +55,13 @@ namespace ImageWithMask
       maskedBrush.Source = imageBrush;
       maskedBrush.Mask = maskBrush;
 
-      var size = MaskedImageStackPanel.ActualSize;
+      var size = MaskedImageGrid.ActualSize;
 
       var outputSpriteVisual = _compositor.CreateSpriteVisual();
       outputSpriteVisual.Size = size;
       outputSpriteVisual.Brush = maskedBrush;
 
-      ElementCompositionPreview.SetElementChildVisual(MaskedImageStackPanel, outputSpriteVisual);
+      ElementCompositionPreview.SetElementChildVisual(MaskedImageGrid, outputSpriteVisual);
     }
 
     private void UnloadBackground()

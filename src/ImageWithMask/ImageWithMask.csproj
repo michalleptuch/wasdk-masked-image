@@ -12,11 +12,6 @@
     <UseWinUI>true</UseWinUI>
     <EnableMsixTooling>true</EnableMsixTooling>
   </PropertyGroup>
-  <ItemGroup>
-    <None Remove="Images\Background.jpg" />
-    <None Remove="Images\Mask.png" />
-    <None Remove="Images\Mask2.png" />
-  </ItemGroup>
 
   <ItemGroup>
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -27,6 +22,7 @@
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Images\Background.jpg" />
+    <Content Include="Images\Folder.svg" />
     <Content Include="Images\Mask.png" />
     <Content Include="Images\Mask2.png" />
   </ItemGroup>
