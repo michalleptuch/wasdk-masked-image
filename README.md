@@ -1,0 +1,1 @@
+# wasdk-masked-image
